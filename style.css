@@ -1,0 +1,8 @@
+.pokemon-container{
+    background-color: rgb(51, 49, 49);
+}
+
+.pokemon-block{
+    background-color: grey;
+    border-radius: 10%;
+}
