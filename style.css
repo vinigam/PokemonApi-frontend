@@ -16,9 +16,14 @@
 }
 
 .pokemon-id{
-    color:white;
+    color:#fff;
+    background-color: black;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
     position: relative;
-    left: 10px;
+    left: 2px;
     bottom:128px;
 }
 .pokemon-name{
@@ -39,12 +44,18 @@
     bottom: 85px;
 }
 .pokemon-type{
-    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(54, 48, 48);
     margin-left: 10px;
+    border-radius: 4%;
+    width: 45px;
+    height: 20px;
 }
 .btn-info{
     position : relative;
-    left: 140px;
+    left: 160px;
     bottom: 80px;
     background-color: black;
     color: white;
@@ -58,6 +69,6 @@ img{
   position: relative;
   background-color: white;
   border-radius: 50%;
-  left : 30px;
+  left : 33px;
   
 }

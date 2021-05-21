@@ -46,7 +46,7 @@ function fetchPokemon(region_name){
                     pokemon_block.classList.add("pokemon-block");
 
                     /*Id settings */
-                    var pokemon_id = document.createTextNode('ID : ' + response.id);
+                    var pokemon_id = document.createTextNode(response.id);
                     var pokemon_id_box = document.createElement('div');
                     pokemon_id_box.classList.add('pokemon-id');
                     pokemon_id_box.appendChild(pokemon_id);
@@ -79,13 +79,14 @@ function fetchPokemon(region_name){
                         
                         let temp = '';
                         for(let i = 0 ; i < response.types.length ; i++){
-                            let type = document.createTextNode(' ' + response.types[i].type.name);
+                            let type = document.createTextNode(response.types[i].type.name);
                             temp = temp + ' ' + response.types[i].type.name;
                             var type_box = document.createElement('div');
                             type_box.classList.add('pokemon-type');
                             type_box.appendChild(type);
                             type_container.appendChild(type_box)
                             pokemon_block.appendChild(type_container);
+                            
                         }
 
                     }else{
@@ -96,7 +97,9 @@ function fetchPokemon(region_name){
                         type_box.appendChild(type);
                         type_container.appendChild(type_box);
                         pokemon_block.appendChild(type_container);
+                        
                     }
+                    colorType();
                     /*More info settings */
                     var btn_info = document.createElement('div');
                     btn_info.classList.add('btn-info');
@@ -114,4 +117,65 @@ function fetchPokemon(region_name){
     }
 }
 
-fetchPokemon("Sinnoh");
+function colorType(){
+    let selectColor = document.getElementsByClassName('pokemon-type');
+    for(let i = 0 ; i < selectColor.length; i++){
+        if(selectColor[i].innerHTML =="normal"){
+            selectColor[i].style.backgroundColor = "#aa9";
+        }else
+        if(selectColor[i].innerHTML =="fire"){
+            selectColor[i].style.backgroundColor = "#f42";
+        }else
+        if(selectColor[i].innerHTML =="water"){
+            selectColor[i].style.backgroundColor = "#39f";
+        }else
+        if(selectColor[i].innerHTML =="electric"){
+            selectColor[i].style.backgroundColor = "#fc3";
+        }else
+        if(selectColor[i].innerHTML =="grass"){
+            selectColor[i].style.backgroundColor = "#7c5";
+        }else
+        if(selectColor[i].innerHTML =="ice"){
+            selectColor[i].style.backgroundColor = "#6cf";
+        }else
+        if(selectColor[i].innerHTML =="fighting"){
+            selectColor[i].style.backgroundColor = "#b54";
+        }else
+        if(selectColor[i].innerHTML =="poison"){
+            selectColor[i].style.backgroundColor = "#a59";
+        }else
+        if(selectColor[i].innerHTML =="ground"){
+            selectColor[i].style.backgroundColor = "#db5";
+        }else
+        if(selectColor[i].innerHTML =="flying"){
+            selectColor[i].style.backgroundColor = "#89f";
+        }else
+        if(selectColor[i].innerHTML =="psychic"){
+            selectColor[i].style.backgroundColor = "#f59";
+        }else
+        if(selectColor[i].innerHTML =="bug"){
+            selectColor[i].style.backgroundColor = "#ab2";
+        }else
+        if(selectColor[i].innerHTML =="rock"){
+            selectColor[i].style.backgroundColor = "#ba6";
+        }else
+        if(selectColor[i].innerHTML =="ghost"){
+            selectColor[i].style.backgroundColor = "#66b";
+        }else
+        if(selectColor[i].innerHTML =="dragon"){
+            selectColor[i].style.backgroundColor = "#76e";
+        }else
+        if(selectColor[i].innerHTML =="dark"){
+            selectColor[i].style.backgroundColor = "#754";
+        }else
+        if(selectColor[i].innerHTML =="steel"){
+            selectColor[i].style.backgroundColor = "#aab";
+        }else
+        if(selectColor[i].innerHTML =="fairy"){
+            selectColor[i].style.backgroundColor = "#e9e";
+        }
+        
+    }
+}
+
+fetchPokemon("Hoenn");
