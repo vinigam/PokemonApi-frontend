@@ -1,7 +1,41 @@
-.pokemon-container{
+body{
+    margin:0px;
+    margin-top: 0px;
     background-color: rgb(51, 49, 49);
+    
+}
+.nav-bar{
+    background-color: black;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.nav-bar-item{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type:none;
+    
+}
+.nav-bar-item-container{
+    border-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 49, 49);
+    color: #fff;
+    border-radius: 10%;
+    margin-left: 10px;
+    width: 60px;
+    height: 30px;
+}
+
+.pokemon-container{
+    
     display: flex; 
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .pokemon-block{
@@ -10,7 +44,7 @@
     border-radius: 3%;
     margin-left: 10px;
     margin-bottom: 10px;
-    width: 300px;
+    width: 260px;
     height: 120px;
     
 }
@@ -22,26 +56,29 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    position: relative;
-    left: 2px;
-    bottom:128px;
+    margin-left: 5px;
+    margin-top: 5px;
+    
 }
 .pokemon-name{
     position: relative;
-    left : 140px;
+    left : 130px;
     bottom: 100px;
+    width: 150px;
   
 }
 .tag{
     position : relative;
-    left: 140px;
-    bottom: 90px;
+    left: 130px;
+    bottom: 95px;
+    width: 100px;
 }
 .type-container{
     position: relative;
     display: flex;
-    left : 140px;
-    bottom: 85px;
+    left : 120px;
+    bottom: 90px;
+    width: 100px;
 }
 .pokemon-type{
     display: flex;
@@ -52,23 +89,41 @@
     border-radius: 4%;
     width: 45px;
     height: 20px;
+    
 }
 .btn-info{
     position : relative;
-    left: 160px;
+    left: 140px;
     bottom: 80px;
     background-color: black;
     color: white;
     border-radius: 4%;
-    width: 100px;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: center; 
 }
-img{
+.img-pokemon{
   position: relative;
   background-color: white;
   border-radius: 50%;
-  left : 33px;
+  left : 25px;
   
+}
+.header-bg{
+ 
+    background-image: url("img/team-1572480_960_720.jpg");
+    background-position: 0px -160px;
+    width: 100%;
+    background-size: cover;
+    height: 150px;
+    color: white;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+}
+h1{
+    margin-left: 20px;
 }

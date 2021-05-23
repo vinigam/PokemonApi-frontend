@@ -5,7 +5,25 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        
+        <div class="header-bg">
+            <h1>NationalDex</h1>
+        </div>
+        <div class="nav-bar">
+            <ul class="nav-bar-item">
+                
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Kanto')">Kanto</button>
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Johto')">Johto</button>
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Hoenn')">Hoenn</button>
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Sinnoh')">Sinnoh</button>
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Unova')">Unova</button>
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Kalos')">Kalos</button>
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Alola')">Alola</button>
+                <button class ="nav-bar-item-container" onclick="fetchPokemon('Galar')">Galar</button>
+            
+
+           
+            </ul>
+        </div>
         <div class="pokemon-container"></div>
         <script src="app.js"></script>
     </body>
