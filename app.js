@@ -45,7 +45,7 @@ function fetchPokemon(region_name){
         Promise.all(pokemons)
         .then(pokemons =>{
             
-            buildHtml(pokemons);
+            build_pokemons_Html(pokemons);
            
             
         })
@@ -53,10 +53,11 @@ function fetchPokemon(region_name){
     }
 }
 
-function buildHtml(pokemons){
+
+function build_pokemons_Html(pokemons){
   
     var pokemon_container = document.getElementsByClassName('pokemon-container');
-
+   
     for(let start = 0; start < pokemons.length ; start++){
         
         /*Box settings*/
@@ -120,12 +121,7 @@ function buildHtml(pokemons){
             
         }
         
-        /*More info settings */
-        var btn_info = document.createElement('div');
-        btn_info.classList.add('btn-info');
-        var btn_text = document.createTextNode('More info');
-        btn_info.appendChild(btn_text);
-        pokemon_block.appendChild(btn_info);
+     
         /*Adding to html*/
         
         
@@ -134,6 +130,9 @@ function buildHtml(pokemons){
     }
     colorType();
 }
+
+
+
 function colorType(){
     let selectColor = document.getElementsByClassName('pokemon-type');
     for(let i = 0 ; i < selectColor.length; i++){
